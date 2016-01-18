@@ -2254,6 +2254,10 @@ static CURLcode ftp_state_retr(struct connectdata *conn,
     return CURLE_FILESIZE_EXCEEDED;
   }
   ftp->downloadsize = filesize;
+  /* uaq */
+  if(data->set.max_download)
+	  ftp->downloadsize = data->set.max_download;
+
 
   if(data->state.resume_from) {
     /* We always (attempt to) get the size of downloads, so it is done before

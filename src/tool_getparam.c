@@ -114,6 +114,8 @@ static const struct LongShort aliases[]= {
   {"*x", "krb4" ,                    TRUE},
          /* 'krb4' is the previous name */
   {"*y", "max-filesize",             TRUE},
+  /* yubo@yubo.org */
+  {"*Y", "max-download",             TRUE},
   {"*z", "disable-eprt",             FALSE},
   {"*Z", "eprt",                     FALSE},
          /* 'eprt' made like this to make --no-eprt and --eprt to work
@@ -721,6 +723,11 @@ ParameterError getparameter(char *flag,    /* f or -long-flag */
         break;
       case 'y': /* --max-filesize */
         err = str2offset(&config->max_filesize, nextarg);
+        if(err)
+          return err;
+        break;
+      case 'Y': /* --max-download */
+        err = str2offset(&config->max_download, nextarg);
         if(err)
           return err;
         break;

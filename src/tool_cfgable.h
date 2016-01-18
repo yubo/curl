@@ -57,6 +57,7 @@ struct Configurable {
   double connecttimeout;
   long maxredirs;
   curl_off_t max_filesize;
+  curl_off_t max_download;
   char *headerfile;
   char *ftpport;
   char *iface;

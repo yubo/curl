@@ -1481,6 +1481,7 @@ struct UserDefined {
                  0 - whatever, 1 - v2, 2 - v6 */
 
   curl_off_t max_filesize; /* Maximum file size to download */
+  curl_off_t max_download; /* Maximum file size to download */
 
   curl_ftpfile ftp_filemethod; /* how to get to a file when FTP is used  */
 

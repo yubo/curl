@@ -129,6 +129,7 @@ static const char *const helptext[] = {
   "     --mail-rcpt TO  Mail to this/these addresses (SMTP)",
   "     --mail-auth AUTH  Originator address of the original email (SMTP)",
   "     --max-filesize BYTES  Maximum file size to download (H/F)",
+  "     --max-download BYTES  Maximum file size to download anyway",
   "     --max-redirs NUM  Maximum number of redirects allowed (H)",
   " -m, --max-time SECONDS  Maximum time allowed for the transfer",
   "     --metalink      Process given URLs as metalink XML file",

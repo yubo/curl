@@ -1569,6 +1569,9 @@ typedef enum {
    * Only supported by the c-ares DNS backend */
   CINIT(DNS_LOCAL_IP6, OBJECTPOINT, 223),
 
+  /* yubo@yubo.org */
+  CINIT(MAXDOWNLOAD_LARGE, OFF_T, 224),
+
   CURLOPT_LASTENTRY /* the last unused */
 } CURLoption;
 

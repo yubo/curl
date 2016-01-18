@@ -1296,6 +1296,11 @@ int operate(struct Configurable *config, int argc, argv_item_t argv[])
           my_setopt(curl, CURLOPT_MAXFILESIZE_LARGE,
                     config->max_filesize);
 
+        /* uaq */
+        if(config->max_download)
+          my_setopt(curl, CURLOPT_MAXDOWNLOAD_LARGE,
+                    config->max_download);
+
         if(4 == config->ip_version)
           my_setopt(curl, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
         else if(6 == config->ip_version)

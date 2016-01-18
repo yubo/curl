@@ -2099,6 +2099,14 @@ CURLcode Curl_setopt(struct SessionHandle *data, CURLoption option,
     data->set.max_filesize = va_arg(param, curl_off_t);
     break;
 
+  case CURLOPT_MAXDOWNLOAD_LARGE:
+    /*
+     * Set the maximum size of a file to download.
+     */
+    data->set.max_download = va_arg(param, curl_off_t);
+    break;
+
+
   case CURLOPT_TCP_NODELAY:
     /*
      * Enable or disable TCP_NODELAY, which will disable/enable the Nagle
