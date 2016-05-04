@@ -384,8 +384,11 @@ static CURLcode readwrite_data(struct SessionHandle *data,
 
   *done = FALSE;
 
-  if(data->set.max_download)
+  if(data->set.max_download && k->bytecount &&
+		  ((data->set.max_download < k->maxdownload) ||
+		   (k->maxdownload < 0))){
 	  k->maxdownload = data->set.max_download;
+  }
 
 
   /* This is where we loop until we have read everything there is to
